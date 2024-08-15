@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FlirtBot
 
-## Getting Started
+FlirtBot is a web application designed to help users improve their text game when flirting with a crush. Using advanced AI, the bot provides feedback, rates users' messages, and suggests improvements to increase the chances of a positive response. The app is built using Next.js, Node.js, and is hosted on both Vercel and an AWS EC2 instance.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🧠 AI-Powered Feedback
+FlirtBot analyzes your text messages and provides constructive feedback. It rates your messages on a scale of 1-10 based on how effective they are in flirting or conveying romantic interest.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 💬 Message Rating
+- **Rate Your Lines:** Receive a score out of 10 for the effectiveness of your text.
+- **Detailed Feedback:** Get detailed explanations on why your text received a particular score and how it can be improved.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🔄 Suggestive Improvements
+- **Alternative Suggestions:** FlirtBot suggests alternative text messages that could potentially lead to a better outcome.
+- **Context-Sensitive:** The bot tailors its feedback based on the context of your conversation, making sure the advice is relevant.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 💻 Responsive Design
+- **Mobile Friendly:** The application is designed to look great and function smoothly on all screen sizes, from mobile phones to desktop monitors.
+- **Easy Navigation:** A clean and intuitive interface that makes it easy for users to interact with the bot.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### **Landing Page**
+![Landing Page](landing-page.png)
+The welcoming screen where users can start their journey with FlirtBot.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Chat Interface**
+![Chat Interface](chat-interface.png)
+The main interface where users interact with FlirtBot, receive feedback, and get suggestions on improving their texts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### **Rating Feedback**
+![Rating Feedback](rating-feedback.png)
+An example of the rating and feedback provided by FlirtBot for a user's message.
 
-## Deploy on Vercel
+## Using FlirtBot
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+FlirtBot is live and accessible to everyone! You can start improving your texting skills right now by visiting [https://flirtbot.vercel.app/](https://flirtbot.vercel.app/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future Plans
+
+### 🌐 Domain and SSL Integration
+- **Domain Name:** Plan to purchase and integrate a domain name to replace the IP-based URL.
+- **SSL Certificate:** Enable HTTPS using SSL/TLS to secure communication between the user and the server.
+
+### 🔗 Social Media Sharing
+- **Shareable Links:** Implement functionality allowing users to share their FlirtBot ratings and suggestions on social media platforms.
+
+### 🧩 Additional Features
+- **Advanced Analytics:** Provide users with more detailed analytics on their conversation history, helping them track improvements over time.
+- **Customization:** Allow users to customize the tone and style of the bot's responses (e.g., playful, serious, casual).
+
+### 📱 Mobile App
+- **React Native App:** Develop a mobile app using React Native to extend FlirtBot’s reach and provide a seamless user experience on smartphones.
