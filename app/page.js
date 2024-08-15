@@ -1,95 +1,65 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
 
-export default function Home() {
+import { Box, Button, Typography, Stack } from '@mui/material';
+import { useRouter } from 'next/navigation';
+
+export default function LandingPage() {
+  const router = useRouter();
+
+  const handleBeginNow = () => {
+    router.push('/main'); // Navigate to the main page
+  };
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box
+      width="100vw"
+      height="100vh"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+    >
+      {/* Hero Section */}
+      <Stack
+        spacing={3}
+        maxWidth="90%" // Adjust width for smaller screens
+        padding={{ xs: 2, sm: 3, md: 4 }}
+        bgcolor="rgba(255, 255, 255, 0.9)"
+        borderRadius={2}
+      >
+        <Typography
+          variant="h2"
+          color="primary.main"
+          fontWeight="bold"
+          fontSize={{ xs: '2rem', sm: '2.5rem', md: '3rem' }} // Responsive font size
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          Welcome to Rate My Game
+        </Typography>
+        <Typography
+          variant="h5"
+          color="text.secondary"
+          fontSize={{ xs: '1rem', sm: '1.25rem', md: '1.5rem' }} // Responsive font size
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          Perfect your crush text game with feedback and improvements from our AI assistant.
+        </Typography>
+        <Button
+          variant="contained"
+          color="secondary"
+          size="large"
+          onClick={handleBeginNow}
+          sx={{
+            fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+            padding: { xs: '8px 16px', sm: '10px 20px', md: '12px 24px' },
+            borderRadius: '8px',
+            transition: 'transform 0.2s',
+            '&:hover': {
+              transform: 'scale(1.05)',
+            },
+          }}
         >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          Begin Now
+        </Button>
+      </Stack>
+    </Box>
   );
 }
